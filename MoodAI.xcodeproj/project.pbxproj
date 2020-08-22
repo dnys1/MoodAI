@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C04FCAE624F194FB000CD3DE /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCAE524F194FB000CD3DE /* Tests_iOS.swift */; };
+		C04FCAF124F194FB000CD3DE /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCAF024F194FB000CD3DE /* Tests_macOS.swift */; };
+		C04FCAF324F194FB000CD3DE /* MoodAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */; };
+		C04FCAF424F194FB000CD3DE /* MoodAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */; };
+		C04FCAF524F194FB000CD3DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCACB24F194FA000CD3DE /* ContentView.swift */; };
+		C04FCAF624F194FB000CD3DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCACB24F194FA000CD3DE /* ContentView.swift */; };
+		C04FCAF724F194FB000CD3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04FCACC24F194FA000CD3DE /* Assets.xcassets */; };
+		C04FCAF824F194FB000CD3DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04FCACC24F194FA000CD3DE /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C04FCAE224F194FB000CD3DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C04FCAC524F194FA000CD3DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C04FCAD024F194FB000CD3DE;
+			remoteInfo = "MoodAI (iOS)";
+		};
+		C04FCAED24F194FB000CD3DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C04FCAC524F194FA000CD3DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C04FCAD824F194FB000CD3DE;
+			remoteInfo = "MoodAI (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAIApp.swift; sourceTree = "<group>"; };
+		C04FCACB24F194FA000CD3DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C04FCACC24F194FA000CD3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C04FCAD124F194FB000CD3DE /* MoodAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04FCAD424F194FB000CD3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04FCAD924F194FB000CD3DE /* MoodAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04FCADB24F194FB000CD3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04FCADC24F194FB000CD3DE /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C04FCAE124F194FB000CD3DE /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04FCAE524F194FB000CD3DE /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		C04FCAE724F194FB000CD3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C04FCAEC24F194FB000CD3DE /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04FCAF024F194FB000CD3DE /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		C04FCAF224F194FB000CD3DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C04FCACE24F194FB000CD3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAD624F194FB000CD3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCADE24F194FB000CD3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAE924F194FB000CD3DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C04FCAC424F194FA000CD3DE = {
+			isa = PBXGroup;
+			children = (
+				C04FCAC924F194FA000CD3DE /* Shared */,
+				C04FCAD324F194FB000CD3DE /* iOS */,
+				C04FCADA24F194FB000CD3DE /* macOS */,
+				C04FCAE424F194FB000CD3DE /* Tests iOS */,
+				C04FCAEF24F194FB000CD3DE /* Tests macOS */,
+				C04FCAD224F194FB000CD3DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C04FCAC924F194FA000CD3DE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */,
+				C04FCACB24F194FA000CD3DE /* ContentView.swift */,
+				C04FCACC24F194FA000CD3DE /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C04FCAD224F194FB000CD3DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCAD124F194FB000CD3DE /* MoodAI.app */,
+				C04FCAD924F194FB000CD3DE /* MoodAI.app */,
+				C04FCAE124F194FB000CD3DE /* Tests iOS.xctest */,
+				C04FCAEC24F194FB000CD3DE /* Tests macOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C04FCAD324F194FB000CD3DE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCAD424F194FB000CD3DE /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		C04FCADA24F194FB000CD3DE /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCADB24F194FB000CD3DE /* Info.plist */,
+				C04FCADC24F194FB000CD3DE /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		C04FCAE424F194FB000CD3DE /* Tests iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCAE524F194FB000CD3DE /* Tests_iOS.swift */,
+				C04FCAE724F194FB000CD3DE /* Info.plist */,
+			);
+			path = "Tests iOS";
+			sourceTree = "<group>";
+		};
+		C04FCAEF24F194FB000CD3DE /* Tests macOS */ = {
+			isa = PBXGroup;
+			children = (
+				C04FCAF024F194FB000CD3DE /* Tests_macOS.swift */,
+				C04FCAF224F194FB000CD3DE /* Info.plist */,
+			);
+			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C04FCAD024F194FB000CD3DE /* MoodAI (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04FCAFB24F194FB000CD3DE /* Build configuration list for PBXNativeTarget "MoodAI (iOS)" */;
+			buildPhases = (
+				C04FCACD24F194FB000CD3DE /* Sources */,
+				C04FCACE24F194FB000CD3DE /* Frameworks */,
+				C04FCACF24F194FB000CD3DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoodAI (iOS)";
+			productName = "MoodAI (iOS)";
+			productReference = C04FCAD124F194FB000CD3DE /* MoodAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C04FCAD824F194FB000CD3DE /* MoodAI (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04FCAFE24F194FB000CD3DE /* Build configuration list for PBXNativeTarget "MoodAI (macOS)" */;
+			buildPhases = (
+				C04FCAD524F194FB000CD3DE /* Sources */,
+				C04FCAD624F194FB000CD3DE /* Frameworks */,
+				C04FCAD724F194FB000CD3DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MoodAI (macOS)";
+			productName = "MoodAI (macOS)";
+			productReference = C04FCAD924F194FB000CD3DE /* MoodAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C04FCAE024F194FB000CD3DE /* Tests iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04FCB0124F194FB000CD3DE /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildPhases = (
+				C04FCADD24F194FB000CD3DE /* Sources */,
+				C04FCADE24F194FB000CD3DE /* Frameworks */,
+				C04FCADF24F194FB000CD3DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C04FCAE324F194FB000CD3DE /* PBXTargetDependency */,
+			);
+			name = "Tests iOS";
+			productName = "Tests iOS";
+			productReference = C04FCAE124F194FB000CD3DE /* Tests iOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C04FCAEB24F194FB000CD3DE /* Tests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C04FCB0424F194FB000CD3DE /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildPhases = (
+				C04FCAE824F194FB000CD3DE /* Sources */,
+				C04FCAE924F194FB000CD3DE /* Frameworks */,
+				C04FCAEA24F194FB000CD3DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C04FCAEE24F194FB000CD3DE /* PBXTargetDependency */,
+			);
+			name = "Tests macOS";
+			productName = "Tests macOS";
+			productReference = C04FCAEC24F194FB000CD3DE /* Tests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C04FCAC524F194FA000CD3DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					C04FCAD024F194FB000CD3DE = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					C04FCAD824F194FB000CD3DE = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					C04FCAE024F194FB000CD3DE = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C04FCAD024F194FB000CD3DE;
+					};
+					C04FCAEB24F194FB000CD3DE = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = C04FCAD824F194FB000CD3DE;
+					};
+				};
+			};
+			buildConfigurationList = C04FCAC824F194FA000CD3DE /* Build configuration list for PBXProject "MoodAI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C04FCAC424F194FA000CD3DE;
+			productRefGroup = C04FCAD224F194FB000CD3DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C04FCAD024F194FB000CD3DE /* MoodAI (iOS) */,
+				C04FCAD824F194FB000CD3DE /* MoodAI (macOS) */,
+				C04FCAE024F194FB000CD3DE /* Tests iOS */,
+				C04FCAEB24F194FB000CD3DE /* Tests macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C04FCACF24F194FB000CD3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAF724F194FB000CD3DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAD724F194FB000CD3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAF824F194FB000CD3DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCADF24F194FB000CD3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAEA24F194FB000CD3DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C04FCACD24F194FB000CD3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAF524F194FB000CD3DE /* ContentView.swift in Sources */,
+				C04FCAF324F194FB000CD3DE /* MoodAIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAD524F194FB000CD3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAF624F194FB000CD3DE /* ContentView.swift in Sources */,
+				C04FCAF424F194FB000CD3DE /* MoodAIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCADD24F194FB000CD3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAE624F194FB000CD3DE /* Tests_iOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C04FCAE824F194FB000CD3DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04FCAF124F194FB000CD3DE /* Tests_macOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C04FCAE324F194FB000CD3DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C04FCAD024F194FB000CD3DE /* MoodAI (iOS) */;
+			targetProxy = C04FCAE224F194FB000CD3DE /* PBXContainerItemProxy */;
+		};
+		C04FCAEE24F194FB000CD3DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C04FCAD824F194FB000CD3DE /* MoodAI (macOS) */;
+			targetProxy = C04FCAED24F194FB000CD3DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C04FCAF924F194FB000CD3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C04FCAFA24F194FB000CD3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C04FCAFC24F194FB000CD3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_NAME = MoodAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C04FCAFD24F194FB000CD3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_NAME = MoodAI;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C04FCAFF24F194FB000CD3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_NAME = MoodAI;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C04FCB0024F194FB000CD3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_NAME = MoodAI;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C04FCB0224F194FB000CD3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dillonnys.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MoodAI (iOS)";
+			};
+			name = Debug;
+		};
+		C04FCB0324F194FB000CD3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dillonnys.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MoodAI (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C04FCB0524F194FB000CD3DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dillonnys.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MoodAI (macOS)";
+			};
+			name = Debug;
+		};
+		C04FCB0624F194FB000CD3DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dillonnys.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "MoodAI (macOS)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C04FCAC824F194FA000CD3DE /* Build configuration list for PBXProject "MoodAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04FCAF924F194FB000CD3DE /* Debug */,
+				C04FCAFA24F194FB000CD3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04FCAFB24F194FB000CD3DE /* Build configuration list for PBXNativeTarget "MoodAI (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04FCAFC24F194FB000CD3DE /* Debug */,
+				C04FCAFD24F194FB000CD3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04FCAFE24F194FB000CD3DE /* Build configuration list for PBXNativeTarget "MoodAI (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04FCAFF24F194FB000CD3DE /* Debug */,
+				C04FCB0024F194FB000CD3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04FCB0124F194FB000CD3DE /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04FCB0224F194FB000CD3DE /* Debug */,
+				C04FCB0324F194FB000CD3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C04FCB0424F194FB000CD3DE /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C04FCB0524F194FB000CD3DE /* Debug */,
+				C04FCB0624F194FB000CD3DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C04FCAC524F194FA000CD3DE /* Project object */;
+}
