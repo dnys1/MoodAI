@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct IntroIconWrappedView: View {
+struct IconWrappedAvatar: View {
     var body: some View {
         GeometryReader { geometry in
             body(for: geometry.size)
         }
         .frame(minHeight: 250, maxHeight: 500)
+        .aspectRatio(1, contentMode: .fit)
     }
     
     private func body(for size: CGSize) -> some View {
@@ -27,7 +28,6 @@ struct IntroIconWrappedView: View {
     }
     
     private func icons(for size: CGSize) -> some View {
-        print("icons received size: \(size)")
         let smallestLength = min(size.width, size.height)
         let iconSize = iconSizeRatio * smallestLength / 2
         let avatarSize = avatarSizeRatio * smallestLength
@@ -41,7 +41,6 @@ struct IntroIconWrappedView: View {
         let startDegrees = -90.0
         
         let center = CGPoint(x: size.width / 2, y: size.height / 2)
-        print("Center: \(center)")
         
         for iconIndex in 0..<numIcons {
             let degrees = Double(iconIndex) * dAngle
@@ -63,7 +62,6 @@ struct IntroIconWrappedView: View {
     }
     
     private func avatar(for size: CGSize) -> some View {
-        print("circle received size: \(size)")
         let smallestLength = min(size.width, size.height)
         let avatarSize = avatarSizeRatio * smallestLength
         let center = CGPoint(x: size.width / 2, y: size.height / 2)
@@ -79,6 +77,6 @@ struct IntroIconWrappedView: View {
 
 struct IntroIconWrappedView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroIconWrappedView()
+        IconWrappedAvatar()
     }
 }

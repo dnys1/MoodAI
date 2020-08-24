@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0191EFE24F1E170004A08AD /* IntroIconWrappedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0191EFD24F1E170004A08AD /* IntroIconWrappedView.swift */; };
-		C0191EFF24F1E170004A08AD /* IntroIconWrappedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0191EFD24F1E170004A08AD /* IntroIconWrappedView.swift */; };
+		C0191EFE24F1E170004A08AD /* IconWrappedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0191EFD24F1E170004A08AD /* IconWrappedAvatar.swift */; };
+		C0191EFF24F1E170004A08AD /* IconWrappedAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0191EFD24F1E170004A08AD /* IconWrappedAvatar.swift */; };
 		C04FCAE624F194FB000CD3DE /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCAE524F194FB000CD3DE /* Tests_iOS.swift */; };
 		C04FCAF124F194FB000CD3DE /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCAF024F194FB000CD3DE /* Tests_macOS.swift */; };
 		C04FCAF324F194FB000CD3DE /* MoodAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */; };
@@ -33,6 +33,10 @@
 		C04FCB2224F1B06C000CD3DE /* DoubleHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04FCB2024F1B06C000CD3DE /* DoubleHelpers.swift */; };
 		C06738A124F1CFD100857056 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06738A024F1CFD100857056 /* IconView.swift */; };
 		C06738A224F1CFD100857056 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06738A024F1CFD100857056 /* IconView.swift */; };
+		C095303224F4072E001AD4D9 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095303124F4072E001AD4D9 /* Title.swift */; };
+		C095303324F4072E001AD4D9 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095303124F4072E001AD4D9 /* Title.swift */; };
+		C095303524F407B7001AD4D9 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095303424F407B7001AD4D9 /* Subtitle.swift */; };
+		C095303624F407B7001AD4D9 /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095303424F407B7001AD4D9 /* Subtitle.swift */; };
 		C0D1C4CC24F2BB0D00703B6A /* IntroProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D1C4CB24F2BB0C00703B6A /* IntroProgress.swift */; };
 		C0D1C4CD24F2BB0D00703B6A /* IntroProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D1C4CB24F2BB0C00703B6A /* IntroProgress.swift */; };
 		C0D1C4CF24F2C3DB00703B6A /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D1C4CE24F2C3DB00703B6A /* NextButton.swift */; };
@@ -59,7 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C0191EFD24F1E170004A08AD /* IntroIconWrappedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroIconWrappedView.swift; sourceTree = "<group>"; };
+		C0191EFD24F1E170004A08AD /* IconWrappedAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconWrappedAvatar.swift; sourceTree = "<group>"; };
 		C04FCACA24F194FA000CD3DE /* MoodAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodAIApp.swift; sourceTree = "<group>"; };
 		C04FCACB24F194FA000CD3DE /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		C04FCACC24F194FA000CD3DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		C04FCB1924F1AA26000CD3DE /* Pie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		C04FCB2024F1B06C000CD3DE /* DoubleHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHelpers.swift; sourceTree = "<group>"; };
 		C06738A024F1CFD100857056 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C095303124F4072E001AD4D9 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		C095303424F407B7001AD4D9 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
 		C0D1C4CB24F2BB0C00703B6A /* IntroProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroProgress.swift; sourceTree = "<group>"; };
 		C0D1C4CE24F2C3DB00703B6A /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		C0D1C4D124F2CE9400703B6A /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		C04FCB0B24F19A6D000CD3DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C095303024F4071F001AD4D9 /* Text */,
 				C0FE1BB424F36C7000F15E3A /* Clouds */,
 				C0FE1BB324F36C5500F15E3A /* Avatar */,
 				C067389F24F1CFB800857056 /* Intro */,
@@ -231,9 +238,18 @@
 				C04FCACB24F194FA000CD3DE /* IntroView.swift */,
 				C06738A024F1CFD100857056 /* IconView.swift */,
 				C0D1C4CE24F2C3DB00703B6A /* NextButton.swift */,
-				C0191EFD24F1E170004A08AD /* IntroIconWrappedView.swift */,
+				C0191EFD24F1E170004A08AD /* IconWrappedAvatar.swift */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		C095303024F4071F001AD4D9 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				C095303124F4072E001AD4D9 /* Title.swift */,
+				C095303424F407B7001AD4D9 /* Subtitle.swift */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 		C0D1C4CA24F2BAFB00703B6A /* Model */ = {
@@ -421,15 +437,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D1C4CF24F2C3DB00703B6A /* NextButton.swift in Sources */,
-				C0191EFE24F1E170004A08AD /* IntroIconWrappedView.swift in Sources */,
+				C0191EFE24F1E170004A08AD /* IconWrappedAvatar.swift in Sources */,
 				C04FCB1624F1A74B000CD3DE /* CircleAvatar.swift in Sources */,
 				C04FCB1C24F1AA26000CD3DE /* Pie.swift in Sources */,
 				C0D1C4D224F2CE9400703B6A /* Avatar.swift in Sources */,
+				C095303524F407B7001AD4D9 /* Subtitle.swift in Sources */,
 				C04FCB2124F1B06C000CD3DE /* DoubleHelpers.swift in Sources */,
 				C04FCB1324F19C38000CD3DE /* Cloud.swift in Sources */,
 				C06738A124F1CFD100857056 /* IconView.swift in Sources */,
 				C04FCB0924F196E4000CD3DE /* Theme.swift in Sources */,
 				C04FCB1A24F1AA26000CD3DE /* ProgressBorder.swift in Sources */,
+				C095303224F4072E001AD4D9 /* Title.swift in Sources */,
 				C04FCAF524F194FB000CD3DE /* IntroView.swift in Sources */,
 				C04FCAF324F194FB000CD3DE /* MoodAIApp.swift in Sources */,
 				C04FCB0D24F19A7A000CD3DE /* CloudPainter.swift in Sources */,
@@ -442,15 +460,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D1C4D024F2C3DB00703B6A /* NextButton.swift in Sources */,
-				C0191EFF24F1E170004A08AD /* IntroIconWrappedView.swift in Sources */,
+				C0191EFF24F1E170004A08AD /* IconWrappedAvatar.swift in Sources */,
 				C04FCB1724F1A74B000CD3DE /* CircleAvatar.swift in Sources */,
 				C04FCB1D24F1AA26000CD3DE /* Pie.swift in Sources */,
 				C0D1C4D324F2CE9400703B6A /* Avatar.swift in Sources */,
+				C095303624F407B7001AD4D9 /* Subtitle.swift in Sources */,
 				C04FCB2224F1B06C000CD3DE /* DoubleHelpers.swift in Sources */,
 				C04FCB1424F19C38000CD3DE /* Cloud.swift in Sources */,
 				C06738A224F1CFD100857056 /* IconView.swift in Sources */,
 				C04FCB0A24F196E4000CD3DE /* Theme.swift in Sources */,
 				C04FCB1B24F1AA26000CD3DE /* ProgressBorder.swift in Sources */,
+				C095303324F4072E001AD4D9 /* Title.swift in Sources */,
 				C04FCAF624F194FB000CD3DE /* IntroView.swift in Sources */,
 				C04FCAF424F194FB000CD3DE /* MoodAIApp.swift in Sources */,
 				C04FCB0E24F19A7A000CD3DE /* CloudPainter.swift in Sources */,

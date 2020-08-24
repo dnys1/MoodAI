@@ -12,24 +12,19 @@ struct IntroView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack(alignment: .center, spacing: 0) {
+            VStack {
                 CloudPainter(offset: 0.0, cloudConfig: cloudConfig)
                 Spacer().layoutPriority(1)
-                Text("Welcome")
-                    .font(.system(size: 40, weight: Font.Weight.medium, design: .default))
-                    .foregroundColor(defaultTheme.white)
+                Title("Welcome")
                 Spacer().layoutPriority(1)
-                IntroIconWrappedView()
+                IconWrappedAvatar()
                     .padding(.horizontal, 30)
                     .layoutPriority(3)
                 Spacer(minLength: 30.0).layoutPriority(1)
-                NextButton() {}
-                    .padding(.bottom, 30)
-                Spacer().layoutPriority(1)
-                Text("Let's build your profile!")
-                    .font(.title)
-                    .foregroundColor(defaultTheme.white)
-                Spacer(minLength: 30.0).layoutPriority(1)
+                NextButton() {}.layoutPriority(2)
+                Subtitle("Let's build your profile!")
+                    .padding()
+                Spacer(minLength: 50.0).layoutPriority(1)
             }
         }
         .background(defaultTheme.backgroundGradient)

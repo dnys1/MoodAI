@@ -31,7 +31,7 @@ struct NextButton: View {
                 .resizable()
                 .scaledToFit()
                 .foregroundColor(active ? defaultTheme.white : defaultTheme.inactiveWhite)
-                .frame(minHeight: 60, maxHeight: 100)
+                .frame(minHeight: 60, idealHeight: 100, maxHeight: 100)
         })
     }
 }

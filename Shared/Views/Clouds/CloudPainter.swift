@@ -89,9 +89,8 @@ struct CloudConfig {
             var y = nextY()
             var dy = abs(y - lastY)
             
-            // Prevent too little in vertical variance between any this
-            // and previous cloud. Prevents too little in average vertical
-            // variable between all clouds.
+            // Prevent too little in vertical variance between this and nearby clouds.
+            // Prevent too little in average vertical variable between all clouds.
             while cloudIsTooClose(with: (x: x, y: y)), averageDy(with: dy) < minAverageDy {
                 y = nextY()
                 dy = abs(y - lastY)
