@@ -31,6 +31,7 @@ struct CloudPainter: View {
         .frame(height: cloudConfig.height, alignment: .leading)
         .offset(x: -offset, y: 0.0)
         .padding(.vertical, Cloud.height / 2)
+        .animation(defaultAnimation)
     }
 }
 

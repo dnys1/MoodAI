@@ -18,6 +18,7 @@ struct Title: View {
         Text(title)
             .font(.system(size: 40, weight: .medium))
             .foregroundColor(defaultTheme.white)
+            .animation(defaultAnimation)
     }
 }
 

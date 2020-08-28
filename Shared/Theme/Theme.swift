@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let defaultAnimation = Animation.easeInOut
+
 struct Theme {
     let backgroundColors: [Color]
     let accentColor: Color

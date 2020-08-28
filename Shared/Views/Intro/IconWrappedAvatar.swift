@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IconWrappedAvatar: View {
+    let step: IntroStep
+    
     var body: some View {
         GeometryReader { geometry in
             body(for: geometry.size)
@@ -24,7 +26,29 @@ struct IconWrappedAvatar: View {
     }
     
     private var allIcons: [Icon] {
-        IconGroup.allCases.map { Icon(iconGroup: $0) }
+        Screens.allCases.map { Icon(data: $0.icon) }
+    }
+    
+    private func isVisible(iconIndex: Int) -> Bool {
+        switch step {
+        case .start:
+            return true
+        case .step(let screen):
+            return iconIndex <= Screens.allCases.firstIndex(of: screen)!
+        case .finish:
+            return true
+        }
+    }
+    
+    private func isHighlighted(iconIndex: Int) -> Bool {
+        switch step {
+        case .start:
+            return false
+        case .step(let screen):
+            return iconIndex < Screens.allCases.firstIndex(of: screen)!
+        case .finish:
+            return true
+        }
     }
     
     private func icons(for size: CGSize) -> some View {
@@ -32,7 +56,7 @@ struct IconWrappedAvatar: View {
         let iconSize = iconSizeRatio * smallestLength / 2
         let avatarSize = avatarSizeRatio * smallestLength
         let paddingSize = paddingSizeRatio * smallestLength / 2
-        let numIcons = IconGroup.allCases.count
+        let numIcons = allIcons.count
         let dAngle = 360.0 / Double(numIcons)
         
         var positions: [CGPoint] = []
@@ -56,7 +80,9 @@ struct IconWrappedAvatar: View {
         return ForEach(0..<numIcons) { iconIndex in
             let icon = allIcons[iconIndex]
             let position = positions[iconIndex]
-            IconView(icon: icon, size: iconSize)
+            let visible = isVisible(iconIndex: iconIndex)
+            let highlighted = isHighlighted(iconIndex: iconIndex)
+            IconView(icon: icon, size: iconSize, visible: visible, highlighted: highlighted)
                 .position(x: position.x, y: position.y)
         }
     }
@@ -77,6 +103,6 @@ struct IconWrappedAvatar: View {
 
 struct IntroIconWrappedView_Previews: PreviewProvider {
     static var previews: some View {
-        IconWrappedAvatar()
+        IconWrappedAvatar(step: .start)
     }
 }

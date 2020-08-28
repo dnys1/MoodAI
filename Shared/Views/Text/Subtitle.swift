@@ -18,6 +18,7 @@ struct Subtitle: View {
         Text(subtitle)
             .font(.title)
             .foregroundColor(defaultTheme.white)
+            .animation(defaultAnimation)
     }
 }
 

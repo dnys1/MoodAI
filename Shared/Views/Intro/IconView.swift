@@ -14,75 +14,52 @@ struct IconData {
 
 struct Icon: Identifiable {
     let id = UUID()
-    let iconGroup: IconGroup
+    let data: IconData
     let filled: Bool
     
-    init(iconGroup: IconGroup, filled: Bool = false) {
-        self.iconGroup = iconGroup
+    init(data: IconData, filled: Bool = false) {
+        self.data = data
         self.filled = filled
     }
-}
-
-enum IconGroup: CaseIterable {
-    case avatar
-    case healthkit
-    case personal
-    case dailylife
-    case commute
-    case sleep
-    case activities
-    case notifications
-    
-    var icon: IconData {
-        switch self {
-        case .avatar:
-            return IconData(unfilled: "face.smiling", filled: "face.smiling.fill")
-        case .healthkit:
-            return IconData(unfilled: "staroflife", filled: "staroflife.fill")
-        case .personal:
-            return IconData(unfilled: "heart", filled: "heart.fill")
-        case .dailylife:
-            return IconData(unfilled: "building", filled: "building.fill")
-        case .commute:
-            return IconData(unfilled: "car", filled: "car.fill")
-        case .sleep:
-            return IconData(unfilled: "bed.double", filled: "bed.double.fill")
-        case .activities:
-            return IconData(unfilled: "figure.walk", filled: "figure.walk")
-        case .notifications:
-            return IconData(unfilled: "exclamationmark.bubble", filled: "exclamationmark.bubble.fill")
-        }
-    }
-    
-    var filled: String { icon.filled }
-    var unfilled: String { icon.unfilled }
 }
 
 struct IconView: View {
     let icon: Icon
     let size: CGFloat
-    let color: Color
+    let visible: Bool
+    let highlighted: Bool
     
-    init(icon: Icon, size: CGFloat = defaultSize, color: Color = defaultColor) {
+    init(icon: Icon, size: CGFloat = defaultSize, visible: Bool = true, highlighted: Bool = false) {
         self.icon = icon
         self.size = size
-        self.color = color
+        self.visible = visible
+        self.highlighted = highlighted
     }
     
     private var systemName: String {
         if icon.filled {
-            return icon.iconGroup.filled
+            return icon.data.filled
         } else {
-            return icon.iconGroup.unfilled
+            return icon.data.unfilled
+        }
+    }
+    
+    private var color: Color {
+        if highlighted {
+            return defaultTheme.white
+        } else {
+            return defaultTheme.grey
         }
     }
     
     var body: some View {
-        Image(systemName: systemName)
-            .resizable()
-            .foregroundColor(color)
-            .scaledToFit()
-            .frame(width: size, height: size, alignment: .center)
+        if visible {
+            Image(systemName: systemName)
+                .resizable()
+                .foregroundColor(color)
+                .scaledToFit()
+                .frame(width: size, height: size, alignment: .center)
+        }
     }
     
     private static let defaultSize: CGFloat = 50.0
@@ -91,6 +68,6 @@ struct IconView: View {
 
 struct IconView_Previews: PreviewProvider {
     static var previews: some View {
-        IconView(icon: Icon(iconGroup: .avatar))
+        IconView(icon: Icon(data: Screens.avatar.icon))
     }
 }

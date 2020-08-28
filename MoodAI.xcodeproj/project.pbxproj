@@ -627,7 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				DEVELOPMENT_TEAM = 6NFV336UD2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -635,7 +635,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.humbleme.MoodAI;
 				PRODUCT_NAME = MoodAI;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -649,7 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WWUCR9U4P8;
+				DEVELOPMENT_TEAM = 6NFV336UD2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -657,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dillonnys.MoodAI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.humbleme.MoodAI;
 				PRODUCT_NAME = MoodAI;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
