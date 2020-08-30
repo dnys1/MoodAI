@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct IconWrappedAvatar: View {
-    let step: IntroStep
+    let step: IntroStage
     
     var body: some View {
         GeometryReader { geometry in
@@ -26,15 +26,17 @@ struct IconWrappedAvatar: View {
     }
     
     private var allIcons: [Icon] {
-        Screens.allCases.map { Icon(data: $0.icon) }
+        IntroStep.allCases.map { Icon(data: $0.icon) }
     }
     
     private func isVisible(iconIndex: Int) -> Bool {
         switch step {
+        case .loading:
+            return false
         case .start:
             return true
         case .step(let screen):
-            return iconIndex <= Screens.allCases.firstIndex(of: screen)!
+            return iconIndex <= IntroStep.allCases.firstIndex(of: screen)!
         case .finish:
             return true
         }
@@ -42,12 +44,28 @@ struct IconWrappedAvatar: View {
     
     private func isHighlighted(iconIndex: Int) -> Bool {
         switch step {
+        case .loading:
+            return false
         case .start:
             return false
         case .step(let screen):
-            return iconIndex < Screens.allCases.firstIndex(of: screen)!
+            return iconIndex < IntroStep.allCases.firstIndex(of: screen)!
         case .finish:
             return true
+        }
+    }
+    
+    private var percentComplete: Double {
+        switch step {
+        case .loading:
+            fallthrough
+        case .start:
+            return 0.0
+        case .step(let screen):
+            let index = IntroStep.allCases.firstIndex(of: screen)!
+            return Double(index) / Double(IntroStep.allCases.count)
+        case .finish:
+            return 1.0
         }
     }
     
@@ -91,7 +109,7 @@ struct IconWrappedAvatar: View {
         let smallestLength = min(size.width, size.height)
         let avatarSize = avatarSizeRatio * smallestLength
         let center = CGPoint(x: size.width / 2, y: size.height / 2)
-        return CircleAvatar(percentComplete: 0.5)
+        return CircleAvatar(percentComplete: percentComplete)
             .frame(width: avatarSize, height: avatarSize)
             .position(x: center.x, y: center.y)
     }

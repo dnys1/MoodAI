@@ -12,7 +12,6 @@ struct ProgressBorder: View {
     ///
     /// 0 indicates the no progress, while 1 indicates full progress.
     var percentComplete: Double
-    private let padding = Angle(degrees: 0.5)
     
     private var endAngle: Angle {
         let degrees = 360 * percentComplete
@@ -20,11 +19,11 @@ struct ProgressBorder: View {
     }
     
     private var inactiveStartAngle: Angle {
-        return Angle(degrees: min(360, endAngle.degrees + padding.degrees))
+        return Angle(degrees: min(360, endAngle.degrees))
     }
     
     private var inactiveEndAngle: Angle {
-        Angle(degrees: 360 - padding.degrees)
+        Angle(degrees: 360)
     }
     
     init(complete: Double) {

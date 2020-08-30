@@ -68,6 +68,6 @@ struct IconView: View {
 
 struct IconView_Previews: PreviewProvider {
     static var previews: some View {
-        IconView(icon: Icon(data: Screens.avatar.icon))
+        IconView(icon: Icon(data: IntroStep.avatar.icon))
     }
 }

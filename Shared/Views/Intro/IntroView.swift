@@ -6,51 +6,26 @@
 //
 
 import SwiftUI
-
-enum Screens: Int, CaseIterable {
-    case avatar
-    case healthkit
-    case personal
-    case dailylife
-    case commute
-    case sleep
-    case activities
-    case notifications
-    
-    var icon: IconData {
-        switch self {
-        case .avatar:
-            return IconData(unfilled: "face.smiling", filled: "face.smiling.fill")
-        case .healthkit:
-            return IconData(unfilled: "staroflife", filled: "staroflife.fill")
-        case .personal:
-            return IconData(unfilled: "heart", filled: "heart.fill")
-        case .dailylife:
-            return IconData(unfilled: "building", filled: "building.fill")
-        case .commute:
-            return IconData(unfilled: "car", filled: "car.fill")
-        case .sleep:
-            return IconData(unfilled: "bed.double", filled: "bed.double.fill")
-        case .activities:
-            return IconData(unfilled: "figure.walk", filled: "figure.walk")
-        case .notifications:
-            return IconData(unfilled: "exclamationmark.bubble", filled: "exclamationmark.bubble.fill")
-        }
-    }
-}
-
-enum IntroStep {
-    case start
-    case step(_ screen: Screens)
-    case finish
-}
+import CoreData
 
 struct IntroView: View {
-    let cloudConfig = CloudConfig()
-    @State var currentScreen: IntroStep
+    private let feedbackGenerator = UINotificationFeedbackGenerator()
+    private let cloudConfig = CloudConfig()
     
-    var title: String {
-        switch currentScreen {
+    @State private var progress = IntroProgress.loading() {
+        didSet {
+            if progress.complete {
+                print("COMPLETE!")
+            }
+        }
+    }
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    private var title: String {
+        switch progress.stage {
+        case .loading:
+            return "Loading"
         case .start:
             return "Welcome"
         case .step(_):
@@ -60,8 +35,8 @@ struct IntroView: View {
         }
     }
     
-    var subtitle: String {
-        switch currentScreen {
+    private var subtitle: String {
+        switch progress.stage {
         case .start:
             return "Let's build your profile!"
         case .step(_):
@@ -71,11 +46,11 @@ struct IntroView: View {
         }
     }
     
-    var content: some View {
-        var primary = IconWrappedAvatar(step: currentScreen)
+    private var content: some View {
+        var primary = IconWrappedAvatar(step: progress.stage)
             .padding(.horizontal, 30)
         var secondary = EmptyView()
-        switch currentScreen {
+        switch progress.stage {
         case .start:
             fallthrough
         default:
@@ -87,16 +62,44 @@ struct IntroView: View {
         }
     }
     
-    var offset: CGFloat {
-        switch currentScreen {
+    private var offset: CGFloat {
+        switch progress.stage {
+        case .loading:
+            fallthrough
         case .start:
             return 0
         case .step(let screen):
-            let count = Screens.allCases.count
-            let currentIndex = Screens.allCases.firstIndex(of: screen)!
+            let count = IntroStep.allCases.count
+            let currentIndex = IntroStep.allCases.firstIndex(of: screen)!
             return CGFloat(currentIndex) / CGFloat(count) * cloudConfig.width
         case .finish:
             return cloudConfig.width
+        }
+    }
+    
+    private func moveToNextStep() {
+        feedbackGenerator.notificationOccurred(.success)
+        withAnimation {
+            var nextStep: IntroStage
+            switch progress.stage {
+            case .loading:
+                nextStep = .start
+            case .start:
+                nextStep = .step(IntroStep.allCases.first!)
+            case .step(let screen):
+                let nextScreenIndex = screen.rawValue + 1
+                let nextScreen = IntroStep(rawValue: nextScreenIndex)
+                if let nextScreen = nextScreen {
+                    nextStep = .step(nextScreen)
+                } else {
+                    nextStep = .finish
+                }
+            case .finish:
+                nextStep = .finish
+                progress.setComplete()
+            }
+            progress.setStep(nextStep)
+            progress.save(context: viewContext)
         }
     }
     
@@ -108,37 +111,26 @@ struct IntroView: View {
                 Title(title)
                 Spacer().layoutPriority(1)
                 content.layoutPriority(3)
-                Spacer(minLength: 30.0).layoutPriority(1)
-                NextButton() {
-                    withAnimation {
-                        switch currentScreen {
-                        case .start:
-                            currentScreen = .step(Screens.allCases.first!)
-                        case .step(let screen):
-                            let nextScreenIndex = screen.rawValue + 1
-                            let nextScreen = Screens(rawValue: nextScreenIndex)
-                            if let nextScreen = nextScreen {
-                                currentScreen = .step(nextScreen)
-                            } else {
-                                currentScreen = .finish
-                            }
-                        case .finish:
-                            break // TODO
-                        }
-                    }
-                }.layoutPriority(2)
-                Subtitle(subtitle)
-                    .padding()
-                Spacer(minLength: 50.0).layoutPriority(1)
+                if progress.stage != .loading {
+                    Spacer(minLength: 30.0).layoutPriority(1)
+                    NextButton() {
+                        moveToNextStep()
+                    }.layoutPriority(2)
+                    Subtitle(subtitle)
+                        .padding()
+                    Spacer(minLength: 50.0).layoutPriority(1)
+                }
             }
         }
         .background(defaultTheme.backgroundGradient)
         .edgesIgnoringSafeArea([.top, .bottom])
+        .onAppear() { progress = IntroProgress.load(context: viewContext) }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        IntroView(currentScreen: .start)
+        IntroView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
