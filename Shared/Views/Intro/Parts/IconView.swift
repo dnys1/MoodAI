@@ -24,6 +24,8 @@ struct Icon: Identifiable {
 }
 
 struct IconView: View {
+    @Environment(\.theme) private var theme
+    
     let icon: Icon
     let size: CGFloat
     let visible: Bool
@@ -46,9 +48,9 @@ struct IconView: View {
     
     private var color: Color {
         if highlighted {
-            return defaultTheme.white
+            return theme.white
         } else {
-            return defaultTheme.grey
+            return theme.grey
         }
     }
     

@@ -9,7 +9,16 @@ import SwiftUI
 
 let defaultAnimation = Animation.easeInOut
 
-struct Theme {
+extension EnvironmentValues {
+    var theme: Theme {
+        get { self[Theme.self] }
+        set { self[Theme.self] = newValue }
+    }
+}
+
+struct Theme: EnvironmentKey {
+    static var defaultValue: Theme = defaultTheme
+    
     let backgroundColors: [Color]
     let accentColor: Color
     let highlightColor: Color

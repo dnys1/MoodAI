@@ -5,7 +5,11 @@
         <attribute name="stage" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="step" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
     </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar" optional="YES" attributeType="String" defaultValueString="&quot;none&quot;"/>
+    </entity>
     <elements>
         <element name="IntroProgressEntity" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="UserEntity" positionX="-63" positionY="9" width="128" height="44"/>
     </elements>
 </model>

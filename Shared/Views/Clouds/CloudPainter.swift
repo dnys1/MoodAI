@@ -106,6 +106,8 @@ struct CloudConfig {
         }
     }
     
+    // MARK: - Drawing Constants
+    
     static let defaultWidth = 1000.0
     static let defaultHeight = 80.0
     private let minHorizontalSpacing = 70.0

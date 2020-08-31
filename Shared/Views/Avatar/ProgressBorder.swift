@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProgressBorder: View {
+    @Environment(\.theme) private var theme
+    
     /// A value between 0 and 1 indicating how much of progress is complete.
     ///
     /// 0 indicates the no progress, while 1 indicates full progress.
@@ -46,9 +48,9 @@ struct ProgressBorder: View {
         let lineWidth = scaledLineWidth(for: size)
         return ZStack {
             Pie(startAngle: Angle(degrees: 0), endAngle: endAngle)
-                .stroke(defaultTheme.highlightColor, lineWidth: lineWidth)
+                .stroke(theme.highlightColor, lineWidth: lineWidth)
             Pie(startAngle: inactiveStartAngle, endAngle: inactiveEndAngle)
-                .stroke(defaultTheme.grey, lineWidth: lineWidth)
+                .stroke(theme.grey, lineWidth: lineWidth)
         }
     }
     

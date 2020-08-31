@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct IconWrappedAvatar: View {
-    let step: IntroStage
+    @EnvironmentObject var user: User
+    
+    let stage: IntroStage
     
     var body: some View {
         GeometryReader { geometry in
@@ -21,6 +23,9 @@ struct IconWrappedAvatar: View {
     private func body(for size: CGSize) -> some View {
         ZStack {
             avatar(for: size)
+            if stage == .step(.avatar) {
+                buttons(for: size)
+            }
             icons(for: size)
         }
     }
@@ -30,39 +35,39 @@ struct IconWrappedAvatar: View {
     }
     
     private func isVisible(iconIndex: Int) -> Bool {
-        switch step {
+        switch stage {
         case .loading:
             return false
         case .start:
             return true
-        case .step(let screen):
-            return iconIndex <= IntroStep.allCases.firstIndex(of: screen)!
+        case .step(let step):
+            return iconIndex <= IntroStep.allCases.firstIndex(of: step)!
         case .finish:
             return true
         }
     }
     
     private func isHighlighted(iconIndex: Int) -> Bool {
-        switch step {
+        switch stage {
         case .loading:
             return false
         case .start:
             return false
-        case .step(let screen):
-            return iconIndex < IntroStep.allCases.firstIndex(of: screen)!
+        case .step(let step):
+            return iconIndex < IntroStep.allCases.firstIndex(of: step)!
         case .finish:
             return true
         }
     }
     
     private var percentComplete: Double {
-        switch step {
+        switch stage {
         case .loading:
             fallthrough
         case .start:
             return 0.0
-        case .step(let screen):
-            let index = IntroStep.allCases.firstIndex(of: screen)!
+        case .step(let step):
+            let index = IntroStep.allCases.firstIndex(of: step)!
             return Double(index) / Double(IntroStep.allCases.count)
         case .finish:
             return 1.0
@@ -105,6 +110,24 @@ struct IconWrappedAvatar: View {
         }
     }
     
+    private func buttons(for size: CGSize) -> some View {
+        let smallestLength = min(size.width, size.height)
+        let iconSize = iconSizeRatio * smallestLength / 2
+        let avatarSize = avatarSizeRatio * smallestLength
+        let paddingSize = paddingSizeRatio * smallestLength / 2
+        let center = CGPoint(x: size.width / 2, y: size.height / 2)
+        
+        let radians = CGFloat(Angle(degrees: 0).radians)
+        let r: CGFloat = (avatarSize / 2) + paddingSize + iconSize / 2
+        let leftX = center.x - r * cos(radians)
+        let rightX = center.x + r * cos(radians)
+        let y = center.y + r * sin(radians)
+        
+        let leftPos = CGPoint(x: leftX, y: y)
+        let rightPos = CGPoint(x: rightX, y: y)
+        return AvatarButtons(leftPos: leftPos, rightPos: rightPos, size: iconSize)
+    }
+    
     private func avatar(for size: CGSize) -> some View {
         let smallestLength = min(size.width, size.height)
         let avatarSize = avatarSizeRatio * smallestLength
@@ -121,6 +144,6 @@ struct IconWrappedAvatar: View {
 
 struct IntroIconWrappedView_Previews: PreviewProvider {
     static var previews: some View {
-        IconWrappedAvatar(step: .start)
+        IconWrappedAvatar(stage: .start)
     }
 }

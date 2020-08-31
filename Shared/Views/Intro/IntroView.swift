@@ -9,6 +9,8 @@ import SwiftUI
 import CoreData
 
 struct IntroView: View {
+    @Environment(\.theme) private var theme
+    
     private let feedbackGenerator = UINotificationFeedbackGenerator()
     private let cloudConfig = CloudConfig()
     
@@ -25,7 +27,7 @@ struct IntroView: View {
     private var title: String {
         switch progress.stage {
         case .loading:
-            return "Loading"
+            return ""
         case .start:
             return "Welcome"
         case .step(_):
@@ -37,28 +39,34 @@ struct IntroView: View {
     
     private var subtitle: String {
         switch progress.stage {
+        case .loading:
+            return ""
         case .start:
             return "Let's build your profile!"
         case .step(_):
             return "Subtitle"
-        default:
+        case .finish:
             return "Get started!"
         }
     }
     
-    private var content: some View {
-        var primary = IconWrappedAvatar(step: progress.stage)
-            .padding(.horizontal, 30)
-        var secondary = EmptyView()
+    @ViewBuilder
+    private var primary: some View {
         switch progress.stage {
-        case .start:
-            fallthrough
+        case .loading:
+            ProgressView()
         default:
-            break
+            IconWrappedAvatar(stage: progress.stage)
+                .padding(.horizontal, 30)
+                .environmentObject(User.current(for: viewContext))
         }
-        return VStack(alignment: .leading) {
-            primary
-            secondary
+    }
+    
+    @ViewBuilder
+    private var secondary: some View {
+        switch progress.stage {
+        default:
+            EmptyView()
         }
     }
     
@@ -99,8 +107,8 @@ struct IntroView: View {
                 progress.setComplete()
             }
             progress.setStep(nextStep)
-            progress.save(context: viewContext)
         }
+        progress.save(context: viewContext)
     }
     
     var body: some View {
@@ -110,7 +118,10 @@ struct IntroView: View {
                 Spacer().layoutPriority(1)
                 Title(title)
                 Spacer().layoutPriority(1)
-                content.layoutPriority(3)
+                VStack(alignment: .leading) {
+                    primary
+                    secondary
+                }.layoutPriority(3)
                 if progress.stage != .loading {
                     Spacer(minLength: 30.0).layoutPriority(1)
                     NextButton() {
@@ -122,7 +133,7 @@ struct IntroView: View {
                 }
             }
         }
-        .background(defaultTheme.backgroundGradient)
+        .background(theme.backgroundGradient)
         .edgesIgnoringSafeArea([.top, .bottom])
         .onAppear() { progress = IntroProgress.load(context: viewContext) }
     }

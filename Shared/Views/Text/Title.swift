@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Title: View {
+    @Environment(\.theme) private var theme
     let title: String
     
     init(_ title: String) {
@@ -17,7 +18,7 @@ struct Title: View {
     var body: some View {
         Text(title)
             .font(.system(size: 40, weight: .medium))
-            .foregroundColor(defaultTheme.white)
+            .foregroundColor(theme.white)
             .animation(defaultAnimation)
     }
 }

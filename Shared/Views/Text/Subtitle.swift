@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Subtitle: View {
+    @Environment(\.theme) private var theme
     let subtitle: String
     
     init(_ subtitle: String) {
@@ -17,7 +18,7 @@ struct Subtitle: View {
     var body: some View {
         Text(subtitle)
             .font(.title)
-            .foregroundColor(defaultTheme.white)
+            .foregroundColor(theme.white)
             .animation(defaultAnimation)
     }
 }

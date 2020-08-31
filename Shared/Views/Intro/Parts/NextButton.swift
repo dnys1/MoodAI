@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct NextButton: View {
+    @Environment(\.theme) private var theme
+    
     let action: () -> Void
     let active: Bool
     
@@ -30,7 +32,7 @@ struct NextButton: View {
             Image(systemName: "arrow.right.circle")
                 .resizable()
                 .scaledToFit()
-                .foregroundColor(active ? defaultTheme.white : defaultTheme.inactiveWhite)
+                .foregroundColor(active ? theme.white : theme.inactiveWhite)
                 .frame(minHeight: 60, idealHeight: 100, maxHeight: 100)
         })
     }

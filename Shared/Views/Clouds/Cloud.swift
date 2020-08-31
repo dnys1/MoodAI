@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct Cloud: View {
+    @Environment(\.theme) private var theme
+    
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: cornerRadius)
-                .fill(defaultTheme.accentColor)
+                .fill(theme.accentColor)
             RoundedRectangle(cornerRadius: cornerRadius)
-                .stroke(defaultTheme.white, lineWidth: strokeWidth)
+                .stroke(theme.white, lineWidth: strokeWidth)
         }
         .frame(width: Cloud.width, height: Cloud.height)
     }

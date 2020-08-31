@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CircleAvatar: View {
+    @Environment(\.theme) private var theme
     let percentComplete: Double
     
     init(percentComplete: Double = 1) {
@@ -16,10 +17,10 @@ struct CircleAvatar: View {
     
     var body: some View {
         ZStack {
-            Circle().fill(defaultTheme.white)
-            Avatar()
+            Circle().fill(theme.white)
+            AvatarView()
                 .scaleEffect(0.6)
-                .foregroundColor(defaultTheme.grey)
+                .foregroundColor(theme.grey)
             ProgressBorder(complete: percentComplete)
         }
         .progressViewStyle(CircularProgressViewStyle())

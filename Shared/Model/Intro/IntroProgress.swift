@@ -73,11 +73,11 @@ struct IntroProgress {
     
     static func load(context: NSManagedObjectContext) -> IntroProgress {
         let entity = IntroProgressEntity.load(context: context)
-        return self.init(from: entity)
+        return IntroProgress(from: entity)
     }
     
     static func loading() -> IntroProgress {
-        return self.init(stage: .loading)
+        return IntroProgress(stage: .loading)
     }
 }
 
