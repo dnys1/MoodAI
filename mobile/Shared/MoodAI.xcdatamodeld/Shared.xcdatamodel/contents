@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17189" systemVersion="20A5354i" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="IntroProgressEntity" representedClassName="IntroProgressEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="complete" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="stage" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="step" optional="YES" attributeType="Integer 16" defaultValueString="-1" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="avatar" optional="YES" attributeType="String" defaultValueString="&quot;none&quot;"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="IntroProgressEntity" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="UserEntity" positionX="-292.9447021484375" positionY="-3.002838134765625" width="128" height="73"/>
+    </elements>
+</model>
